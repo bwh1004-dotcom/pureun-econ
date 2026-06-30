@@ -310,6 +310,7 @@ function App(){
   const [selected,setSelected]=useState(null);
   const [progress,setProgress]=useState(loadProgress);
   const [showCert,setShowCert]=useState(false);
+  const [filter,setFilter]=useState('전체');
 
   const completedCount=Object.values(progress).filter(v=>v).length;
   const allDone=completedCount===EPISODES.length;
@@ -427,7 +428,6 @@ function App(){
 
   // HOME
   const tags=['전체','기초','심화','실전'];
-  const [filter,setFilter]=useState('전체');
 
   return e('div',{style:{minHeight:'100vh',background:'#0f1923'}},
     // header
